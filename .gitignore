@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+
+# Private dataset & assets
+assets/
+adversarial/
+adversarial_composites/
+negatives/
+*_image.jpg
+dataset_manifest.csv
+
+# Test & scratch images
+test*
+meow.png
+togif.gif
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
