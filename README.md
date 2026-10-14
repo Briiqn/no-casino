@@ -287,8 +287,16 @@ no-casino/
 
 ---
 
-## License & Disclaimers
+## Attribution & License
 
-Distributed under the MIT License.
+Distributed under the MIT License with mandatory attribution.
+
+**Requirement**: If you use this model, the pre-trained weights (`best_mrbeast_scam_model.pth`), or this codebase in any project, bot, service, paper, or derivative work, **you must credit Briiqn** and include a link to this repository:
+```text
+Model: no-casino by Briiqn (https://github.com/Briiqn/no-casino)
+```
+
+### Disclaimers
 
 This repository is an independent research project intended for defensive spam filtering, community moderation bots, and security research. It is not affiliated with, endorsed by, or sponsored by MrBeast, YouTube, or any associated entities. All trademarks, logos, and likenesses referenced are used strictly for identification and defense benchmarking under Fair Use.
+
