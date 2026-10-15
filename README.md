@@ -46,6 +46,17 @@ A common modern reflex for image moderation is to route incoming media to a gene
 | **Model Size / VRAM** | 7B – 70B+ params (24GB – 80GB+ VRAM) | **28.6M params** (~111 MB disk, <500 MB VRAM) |
 | **Prompt Injection Risk** | High (Visual jailbreaks / prompt overrides) | **None** (Direct sigmoid probability output) |
 
+### On "overfitting" to this specific scam
+
+Yes, this model is heavily fitted to this specific scam campaign. That's by design.
+
+In general vision tasks, overfitting is bad. In automated spam filtering, loose generalization is worse:
+- **False positives ruin chat moderation.** If a model tries to broadly generalize what a scam looks like, it starts flagging gaming stream clips, YouTube thumbnails, and community jokes just because they contain MrBeast's face or bright graphics. False bans create mod-queue headaches.
+- **Scammers don't invent new graphic design.** Bot networks blast thousands of photos of the same 3 or 4 monitor setups (the "$5,600 Wolzabet bonus" layout, the Micawin withdrawal modal, etc.).
+- **We want a neural fingerprint, not a philosopher.** The model is locked onto the exact UI geometry and monitor artifacts of this specific bot wave, while the adversarial negative set (memes, composites, clean logos) carves out a hard boundary so innocent Discord chatter never trips the alarm.
+
+If scammers completely overhaul their landing page and visual layout, you collect a few dozen samples and fine-tune. For stopping the current bot wave without collateral damage, narrow precision beats fuzzy heuristics.
+
 ---
 
 ## Dataset & Privacy Notice
